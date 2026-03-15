@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Back-left stone (andesite) -->
+  <ellipse cx="10" cy="22" rx="7" ry="5.5" fill="#8a827a" transform="rotate(-12 10 22)"/>
+  <!-- Back-right stone (dacite) -->
+  <ellipse cx="23" cy="21" rx="6.5" ry="5" fill="#b5ada3" transform="rotate(8 23 21)"/>
+  <!-- Center-bottom large stone (andesite light) -->
+  <ellipse cx="16" cy="23" rx="8" ry="6" fill="#a09994" transform="rotate(3 16 23)"/>
+  <!-- Top stone (dacite light) -->
+  <ellipse cx="17" cy="13" rx="6" ry="4.5" fill="#cdc5bb" transform="rotate(-5 17 13)"/>
+  <!-- Phenocryst flecks -->
+  <ellipse cx="15" cy="13" rx="1.2" ry="1" fill="#d8d2cb"/>
+  <ellipse cx="20" cy="14" rx="0.8" ry="0.8" fill="#d8d2cb"/>
+  <!-- Small pebble accent -->
+  <ellipse cx="24" cy="18" rx="3" ry="2.5" fill="#6e6760" transform="rotate(15 24 18)"/>
+</svg>
