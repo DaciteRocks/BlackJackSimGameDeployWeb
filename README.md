@@ -7,21 +7,21 @@ A personal portfolio website hosted on GitHub Pages at [connorwardell.com](https
 ### BlackJack Simulator
 A blackjack simulator that teaches basic strategy.
 
-- **Live:** [connorwardell.com/BlackJackGame](https://connorwardell.com/BlackJackGame/index.html)
+- **Live:** [connorwardell.com/blackjackgame](https://connorwardell.com/blackjackgame/index.html)
 - **Source:** [github.com/DaciteRocks/BlackJackSim](https://github.com/DaciteRocks/BlackJackSim)
 - Hosted as a static page deployed through this repo
 
 ### Rapid Recall
 Get your friends to guess the word before time runs out! A multiplayer game of quick thinking and communication.
 
-- **Live:** [connorwardell.com/RapidRecall](https://connorwardell.com/RapidRecall/index.html)
+- **Live:** [connorwardell.com/rapidrecall](https://connorwardell.com/rapidrecall/index.html)
 - **Source:** [github.com/DaciteRocks/RapidRecall](https://github.com/DaciteRocks/RapidRecall)
 - Hosted as a static page deployed through this repo
 
 ### Ring Generator
 A parametric 3D ring generator that lets you customize and design rings.
 
-- **Live:** [connorwardell.com/RingGenerator](https://connorwardell.com/RingGenerator/index.html)
+- **Live:** [connorwardell.com/ringgenerator](https://connorwardell.com/ringgenerator/index.html)
 - **Source:** [github.com/DaciteRocks/ParametricRingGenerator](https://github.com/DaciteRocks/ParametricRingGenerator)
 - Hosted as a static page deployed through this repo
 
