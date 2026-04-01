@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hibernated Projects | Dacite</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+        .game-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Header Section -->
+    <header class="text-center mb-12">
+        <a href="/" class="text-gray-500 hover:text-gray-300 text-sm mb-4 inline-block">&larr; Back to Home</a>
+        <h1 class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 mb-2">Hibernated Projects</h1>
+        <p class="text-lg md:text-xl text-gray-400">Projects that are on pause for now</p>
+    </header>
+
+    <!-- Projects Grid -->
+    <main class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Pisscord -->
+        <a href="https://pisscord.dacite.dev" class="game-card block rounded-xl overflow-hidden bg-gray-800 hover:bg-gray-700 flex flex-col h-[28rem]">
+            <div class="p-6 flex-grow">
+                <h2 class="text-2xl font-bold text-white mb-2">Pisscord</h2>
+                <p class="text-gray-400">A Discord clone. Chat with friends in real time.</p>
+            </div>
+            <div class="w-full bg-gray-700 flex items-center justify-center py-12 rounded-b-xl">
+                <span class="text-5xl text-gray-500">💬</span>
+            </div>
+        </a>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="mt-12 text-center text-gray-500">
+        <p>&copy; 2026 Dacite. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

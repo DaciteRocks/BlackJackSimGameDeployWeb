@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Dacite</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background:
+                /* Cracks / veins */
+                linear-gradient(137deg, transparent 40%, rgba(99, 82, 62, 0.12) 41%, transparent 42%),
+                linear-gradient(215deg, transparent 55%, rgba(99, 82, 62, 0.10) 56%, transparent 57%),
+                linear-gradient(320deg, transparent 30%, rgba(99, 82, 62, 0.08) 31%, transparent 32%),
+                linear-gradient(45deg, transparent 65%, rgba(80, 65, 45, 0.10) 66%, transparent 67%),
+                /* Mineral speckles */
+                radial-gradient(1.5px 1.5px at 15% 25%, rgba(180, 160, 130, 0.25), transparent),
+                radial-gradient(1px 1px at 70% 15%, rgba(160, 140, 110, 0.20), transparent),
+                radial-gradient(2px 2px at 40% 70%, rgba(140, 120, 95, 0.18), transparent),
+                radial-gradient(1px 1px at 85% 55%, rgba(170, 150, 120, 0.22), transparent),
+                radial-gradient(1.5px 1.5px at 25% 85%, rgba(150, 130, 100, 0.20), transparent),
+                radial-gradient(1px 1px at 55% 40%, rgba(130, 115, 90, 0.15), transparent),
+                radial-gradient(2px 2px at 90% 80%, rgba(160, 140, 110, 0.18), transparent),
+                radial-gradient(1px 1px at 10% 60%, rgba(145, 125, 100, 0.20), transparent),
+                /* Crystal / grain patches */
+                radial-gradient(ellipse 120px 80px at 20% 30%, rgba(90, 75, 55, 0.08), transparent),
+                radial-gradient(ellipse 100px 140px at 75% 65%, rgba(70, 58, 42, 0.10), transparent),
+                radial-gradient(ellipse 150px 90px at 50% 20%, rgba(85, 70, 50, 0.06), transparent),
+                radial-gradient(ellipse 80px 120px at 30% 75%, rgba(75, 62, 45, 0.08), transparent),
+                /* Base rock gradient */
+                radial-gradient(ellipse at 30% 50%, #1a1714 0%, transparent 70%),
+                radial-gradient(ellipse at 70% 50%, #16140f 0%, transparent 70%),
+                linear-gradient(180deg, #141210 0%, #1a1714 40%, #151310 100%);
+        }
+        body > * {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+    <h1 class="text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 mb-4">404</h1>
+    <p class="text-xl text-gray-400 mb-2">This page doesn't exist.</p>
+    <p class="text-sm text-gray-600 mb-8">You've hit bedrock.</p>
+    <a href="/" class="px-6 py-3 rounded-lg bg-gray-800/80 hover:bg-gray-700/80 text-teal-400 font-bold transition-colors border border-gray-700">Back to Home</a>
+</body>
+</html>
