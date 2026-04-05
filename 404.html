@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found | Dacite</title>
     <link rel="icon" type="image/png" href="/favicon.png">
+    <script>
+        // SPA redirect for GitHub Pages
+        // If the path belongs to an SPA sub-project, redirect to that app's
+        // index.html with the route encoded as a query parameter so the
+        // client-side router can restore the correct page.
+        (function () {
+            var spaProjects = ['parametriccastworks'];
+            var path = location.pathname;
+            for (var i = 0; i < spaProjects.length; i++) {
+                var prefix = '/' + spaProjects[i] + '/';
+                if (path.indexOf(prefix) === 0 && path.length > prefix.length) {
+                    var repo = spaProjects[i];
+                    var route = path.slice(prefix.length);
+                    var query = location.search ? '&' + location.search.slice(1) : '';
+                    location.replace(
+                        '/' + repo + '/?p=/' + encodeURIComponent(route) + query + location.hash
+                    );
+                    return;
+                }
+            }
+        })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
