@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="r"><rect x="2" y="2" width="28" height="28" rx="7"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="32" height="32" fill="#18171a"/>
+    <g transform="rotate(-9 16 16)">
+      <!-- Ember surface -->
+      <rect x="-6" y="-8" width="44" height="9.5" fill="#e8703a"/>
+      <!-- Clay / stone strata -->
+      <rect x="-6" y="1.5" width="44" height="4" fill="#b08968"/>
+      <rect x="-6" y="5.5" width="44" height="4" fill="#8a6f53"/>
+      <rect x="-6" y="9.5" width="44" height="4" fill="#5c4a3a"/>
+      <rect x="-6" y="13.5" width="44" height="4" fill="#3a3632"/>
+      <!-- Basalt bedrock -->
+      <rect x="-6" y="17.5" width="44" height="24" fill="#211f23"/>
+    </g>
+  </g>
+</svg>
