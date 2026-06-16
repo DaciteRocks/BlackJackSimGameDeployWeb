@@ -1,0 +1,1 @@
+import{r as c}from"./vendor-BsOJRPCQ.js";const e=[];let n=!1;function r(t){t.key!=="Escape"||e.length===0||e[e.length-1]()}function o(t){c.useEffect(()=>(e.push(t),!n&&typeof document<"u"&&(document.addEventListener("keydown",r),n=!0),()=>{const s=e.lastIndexOf(t);s!==-1&&e.splice(s,1),e.length===0&&n&&(document.removeEventListener("keydown",r),n=!1)}),[t])}export{o as u};
