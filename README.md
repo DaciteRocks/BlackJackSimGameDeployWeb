@@ -1,37 +1,32 @@
-# Dacite Games
+# DaciteDevHome
 
-A personal portfolio website hosted on GitHub Pages at [dacite.dev](https://dacite.dev). This repo serves as the deployment hub for a collection of projects I've built.
+The home page for **[dacite.dev](https://dacite.dev)** — a personal portfolio and deployment hub
+for the projects I build. Hosted on **GitHub Pages** (classic branch deploy from `main`, custom
+domain via `CNAME`, Jekyll disabled via `.nojekyll`).
 
-## Projects
+The homepage (`index.html` + `styles.css`) is a hand-written static site — no build step. Each
+project lives in its own subfolder and is built/deployed into this repo by its source project's
+own deploy script.
 
-### BlackJack Simulator
-A blackjack simulator that teaches basic strategy.
+## Layout
 
-- **Live:** [dacite.dev/blackjackgame](https://dacite.dev/blackjackgame/index.html)
-- **Source:** [github.com/DaciteRocks/BlackJackSim](https://github.com/DaciteRocks/BlackJackSim)
-- Hosted as a static page deployed through this repo
+| Path | Project | Source repo | Fed by |
+|------|---------|-------------|--------|
+| `/parametriccastworks/` | Parametric Castworks (3D jewelry generator) | `DaciteRocks/ParametricRingGenerator` | vite `copy-to-deploy` plugin |
+| `/spireplus1/` | Spire Plus 1 (incremental deckbuilder) | `DaciteRocks/SpirePlus1` | vite `outDir` |
+| `/sharp21/` | Blackjack Sharp Trainer | `DaciteRocks/BlackJackGame` | `npm run build:web` |
+| `/refrigerasat/` | RefrigeraSat (HVAC tool) | `DaciteRocks/ConnerRefrigerantSaturationTempTool` | `npm run build:web` |
+| `/blackjackgame/` | Blackjack Simulator | `DaciteRocks/BlackJackSim` (Godot) | Godot Web export preset |
+| `/rapidrecall/` | Rapid Recall (party game) | `DaciteRocks/RapidRecall` (Godot) | Godot Web export preset |
+| `/cairntodo/`, `/strata/` | App store support/privacy pages only (no web build) | `DaciteRocks/ToDoApp` | `npm run deploy-web` |
 
-### Rapid Recall
-Get your friends to guess the word before time runs out! A multiplayer game of quick thinking and communication.
-
-- **Live:** [dacite.dev/rapidrecall](https://dacite.dev/rapidrecall/index.html)
-- **Source:** [github.com/DaciteRocks/RapidRecall](https://github.com/DaciteRocks/RapidRecall)
-- Hosted as a static page deployed through this repo
-
-### Ring Generator
-A parametric 3D ring generator that lets you customize and design rings.
-
-- **Live:** [dacite.dev/ringgenerator](https://dacite.dev/ringgenerator/index.html)
-- **Source:** [github.com/DaciteRocks/ParametricRingGenerator](https://github.com/DaciteRocks/ParametricRingGenerator)
-- Hosted as a static page deployed through this repo
-
-### Pisscord
-A Discord clone for real-time chat with friends.
-
-- **Live:** [pisscord.dacite.dev](https://pisscord.dacite.dev)
-- **Source:** [github.com/DaciteRocks/Pisscord](https://github.com/DaciteRocks/Pisscord)
-- Hosted on Vercel
+[Pisscord](https://pisscord.dacite.dev) (a Discord clone) is deployed separately on Vercel.
 
 ## Deployment
 
-BlackJack Simulator, Rapid Recall, and Ring Generator are served as static pages via GitHub Pages from this repo. Pisscord is deployed separately on Vercel.
+GitHub Pages serves this repo's `main` branch root directly. There is no CI build — committing and
+pushing the working tree is the deploy. The custom domain `dacite.dev` is set by `CNAME`, so the
+GitHub repo can be renamed without changing the live URL.
+
+Each source project's deploy script writes its built output into the matching subfolder here; the
+build then commits and pushes from this repo.

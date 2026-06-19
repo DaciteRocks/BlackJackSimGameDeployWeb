@@ -3,156 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dacite Website</title>
+    <title>Dacite — projects by Connor Wardell</title>
+    <meta name="description" content="Dacite.dev — a collection of games, tools, and apps built by Connor Wardell. Deckbuilders, 3D generators, mobile trainers, and more.">
+    <meta name="theme-color" content="#0d0e12">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dacite — projects by Connor Wardell">
+    <meta property="og:description" content="Games, tools, and apps. Everything here is live and playable.">
+    <meta property="og:url" content="https://dacite.dev">
+    <meta property="og:image" content="https://dacite.dev/favicon.png">
+    <meta name="twitter:card" content="summary">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            color: #E0E0E0;
-            position: relative;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background:
-                /* Cracks / veins */
-                linear-gradient(137deg, transparent 40%, rgba(99, 82, 62, 0.12) 41%, transparent 42%),
-                linear-gradient(215deg, transparent 55%, rgba(99, 82, 62, 0.10) 56%, transparent 57%),
-                linear-gradient(320deg, transparent 30%, rgba(99, 82, 62, 0.08) 31%, transparent 32%),
-                linear-gradient(45deg, transparent 65%, rgba(80, 65, 45, 0.10) 66%, transparent 67%),
-                linear-gradient(170deg, transparent 20%, rgba(90, 75, 55, 0.07) 21%, transparent 22%),
-                linear-gradient(260deg, transparent 75%, rgba(85, 70, 50, 0.09) 76%, transparent 77%),
-                /* Mineral speckles */
-                radial-gradient(1.5px 1.5px at 15% 25%, rgba(180, 160, 130, 0.25), transparent),
-                radial-gradient(1px 1px at 70% 15%, rgba(160, 140, 110, 0.20), transparent),
-                radial-gradient(2px 2px at 40% 70%, rgba(140, 120, 95, 0.18), transparent),
-                radial-gradient(1px 1px at 85% 55%, rgba(170, 150, 120, 0.22), transparent),
-                radial-gradient(1.5px 1.5px at 25% 85%, rgba(150, 130, 100, 0.20), transparent),
-                radial-gradient(1px 1px at 55% 40%, rgba(130, 115, 90, 0.15), transparent),
-                radial-gradient(2px 2px at 90% 80%, rgba(160, 140, 110, 0.18), transparent),
-                radial-gradient(1px 1px at 10% 60%, rgba(145, 125, 100, 0.20), transparent),
-                /* Crystal / grain patches */
-                radial-gradient(ellipse 120px 80px at 20% 30%, rgba(90, 75, 55, 0.08), transparent),
-                radial-gradient(ellipse 100px 140px at 75% 65%, rgba(70, 58, 42, 0.10), transparent),
-                radial-gradient(ellipse 150px 90px at 50% 20%, rgba(85, 70, 50, 0.06), transparent),
-                radial-gradient(ellipse 80px 120px at 30% 75%, rgba(75, 62, 45, 0.08), transparent),
-                /* Base rock gradient */
-                radial-gradient(ellipse at 30% 50%, #1a1714 0%, transparent 70%),
-                radial-gradient(ellipse at 70% 50%, #16140f 0%, transparent 70%),
-                linear-gradient(180deg, #141210 0%, #1a1714 40%, #151310 100%);
-        }
-        body > * {
-            position: relative;
-            z-index: 1;
-        }
-        .game-card {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            cursor: pointer;
-            border: 1px solid rgba(99, 82, 62, 0.2);
-        }
-        .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            border-color: rgba(99, 82, 62, 0.4);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen p-4">
+<body>
+    <a class="skip-link" href="#projects">Skip to projects</a>
 
-    <!-- Header Section -->
-    <header class="text-center mb-12">
-        <h1 class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 mb-2">Dacite Projects</h1>
-        <p class="text-lg md:text-xl text-gray-400">A collection of different projects made by me</p>
+    <header class="site-header" id="siteHeader">
+        <div class="wrap nav">
+            <a class="brand" href="/" aria-label="Dacite home">
+                <img class="mark" src="/favicon.png" alt="" width="28" height="28">
+                Dacite<span class="dot">.</span>dev
+            </a>
+        </div>
     </header>
 
-    <!-- Projects Grid -->
-    <main class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <main>
+        <section class="hero wrap">
+            <h1>I'm <span class="heat">Dacite</span>.</h1>
+            <p>I make stuff sometimes. Here is where I store them.</p>
+        </section>
 
-        <!-- Parametric Castworks -->
-        <a href="./parametriccastworks/" class="game-card block rounded-xl overflow-hidden bg-gray-800 hover:bg-gray-700 flex flex-col h-[28rem]">
-            <div class="p-6 flex-grow">
-                <h2 class="text-2xl font-bold text-white mb-2">Parametric Castworks</h2>
-                <p class="text-gray-400">A parametric 3D model generator that lets you customize and design rings, keychains, worry stones, and more and then request to get them cast in metal.</p>
-            </div>
-            <div class="w-full bg-gray-700 flex items-center justify-center py-12 rounded-b-xl">
-                <span class="text-5xl text-gray-500">💍</span>
-            </div>
-        </a>
+        <section class="wrap" id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading" class="visually-hidden">Projects</h2>
 
-        <!-- Blackjack Sharp Trainer -->
-        <a href="./sharp21/" class="game-card block rounded-xl overflow-hidden bg-gray-800 hover:bg-gray-700 flex flex-col h-[28rem]">
-            <div class="p-6 flex-grow">
-                <h2 class="text-2xl font-bold text-white mb-2">Blackjack Sharp Trainer</h2>
-                <p class="text-gray-400">A gamified mobile blackjack experience. Level up, unlock achievements, and master card counting in a fun, progression-driven format.</p>
+            <div class="filters" role="group" aria-label="Filter projects by category">
+                <button class="chip" data-filter="all" aria-pressed="true">All</button>
+                <button class="chip" data-filter="games" aria-pressed="false">Games</button>
+                <button class="chip" data-filter="apps" aria-pressed="false">Apps</button>
+                <button class="chip" data-filter="tools" aria-pressed="false">Tools</button>
             </div>
-            <div class="w-full bg-gray-700 flex items-center justify-center py-12 rounded-b-xl">
-                <span class="text-5xl text-gray-500">🃏</span>
-            </div>
-        </a>
 
-        <!-- Spire Plus 1 -->
-        <a href="./spireplus1/" class="game-card block rounded-xl overflow-hidden bg-gray-800 hover:bg-gray-700 flex flex-col h-[28rem]">
-            <div class="p-6 flex-grow">
-                <h2 class="text-2xl font-bold text-white mb-2">Spire Plus 1</h2>
-                <p class="text-gray-400">A Slay the Spire clone with incremental game elements. Build your deck, climb the spire, and grow stronger with each run.</p>
-            </div>
-            <div class="w-full bg-gray-700 flex items-center justify-center py-12 rounded-b-xl">
-                <span class="text-5xl text-gray-500">🗼</span>
-            </div>
-        </a>
+            <div class="grid" id="grid">
 
-        <!-- RefrigeraSat -->
-        <a href="./refrigerasat/" class="game-card block rounded-xl overflow-hidden bg-gray-800 hover:bg-gray-700 flex flex-col h-[28rem]">
-            <div class="p-6 flex-grow">
-                <h2 class="text-2xl font-bold text-white mb-2">RefrigeraSat</h2>
-                <p class="text-gray-400">A refrigerant saturation temperature tool. Input a refrigerant type and pressure (PSI) to get the saturation temperature.</p>
-            </div>
-            <div class="w-full bg-gray-700 flex items-center justify-center py-12 rounded-b-xl">
-                <span class="text-5xl text-gray-500">🌡️</span>
-            </div>
-        </a>
+                <a class="card reveal" data-category="tools" href="/parametriccastworks/">
+                    <div class="card-head">
+                        <h3>Parametric Castworks</h3>
+                        <span class="status is-active"><span class="led"></span> Active</span>
+                    </div>
+                    <p class="card-desc">A parametric 3D model generator — design rings, keychains, worry stones and more in the browser, then request them cast in real metal.</p>
+                    <p class="card-tags">React · Three.js · WASM CSG</p>
+                </a>
 
-        <!-- Godot Projects -->
-        <a href="./godot-projects/" class="game-card block rounded-xl overflow-hidden bg-gray-800 hover:bg-gray-700 flex flex-col h-[28rem]">
-            <div class="p-6 flex-grow">
-                <h2 class="text-2xl font-bold text-white mb-2">Godot Projects</h2>
-                <p class="text-gray-400">Web-playable games built with the Godot engine.</p>
-            </div>
-            <div class="w-full bg-gray-700 flex items-center justify-center py-12 rounded-b-xl">
-                <span class="text-5xl text-gray-500">🎮</span>
-            </div>
-        </a>
+                <a class="card reveal" data-category="games" href="/spireplus1/">
+                    <div class="card-head">
+                        <h3>Spire Plus 1</h3>
+                        <span class="status is-active"><span class="led"></span> Active</span>
+                    </div>
+                    <p class="card-desc">A Slay the Spire–inspired incremental deckbuilder. Climb the spire, earn gold, then deploy automated clones to run it endlessly while you push deeper.</p>
+                    <p class="card-tags">React · TypeScript · Incremental</p>
+                </a>
 
-        <!-- Hibernated Projects -->
-        <a href="./hibernated/" class="game-card block rounded-xl overflow-hidden bg-gray-800 hover:bg-gray-700 flex flex-col h-[28rem]">
-            <div class="p-6 flex-grow">
-                <h2 class="text-2xl font-bold text-white mb-2">Hibernated Projects</h2>
-                <p class="text-gray-400">Projects that are on pause for now.</p>
-            </div>
-            <div class="w-full bg-gray-700 flex items-center justify-center py-12 rounded-b-xl">
-                <span class="text-5xl text-gray-500">💤</span>
-            </div>
-        </a>
+                <a class="card reveal" data-category="apps" href="/sharp21/">
+                    <div class="card-head">
+                        <h3>Blackjack Sharp Trainer</h3>
+                        <span class="status is-active"><span class="led"></span> Active</span>
+                    </div>
+                    <p class="card-desc">Master basic strategy and card counting with a pure trainer, a configurable counting simulator, and a Balatro-style roguelite — all fully offline.</p>
+                    <p class="card-tags">React Native · Expo · iOS &amp; Web</p>
+                </a>
 
+                <a class="card reveal" data-category="games" href="/blackjackgame/index.html">
+                    <div class="card-head">
+                        <h3>Blackjack Simulator</h3>
+                        <span class="status is-active"><span class="led"></span> Active</span>
+                    </div>
+                    <p class="card-desc">A clean blackjack simulator that teaches basic strategy hand by hand. Built in Godot and playable right in the browser.</p>
+                    <p class="card-tags">Godot · WebGL</p>
+                </a>
+
+                <a class="card reveal" data-category="games" href="/rapidrecall/index.html">
+                    <div class="card-head">
+                        <h3>Rapid Recall</h3>
+                        <span class="status is-active"><span class="led"></span> Active</span>
+                    </div>
+                    <p class="card-desc">Get your friends to guess the word before time runs out — a fast party game of quick thinking and frantic communication.</p>
+                    <p class="card-tags">Godot · Party · Multiplayer</p>
+                </a>
+
+                <a class="card reveal" data-category="tools" href="/refrigerasat/">
+                    <div class="card-head">
+                        <h3>RefrigeraSat</h3>
+                        <span class="status is-active"><span class="led"></span> Active</span>
+                    </div>
+                    <p class="card-desc">A refrigerant saturation-temperature lookup. Pick a refrigerant and enter a pressure (PSI) to get the saturation temperature instantly.</p>
+                    <p class="card-tags">Expo · HVAC · Utility</p>
+                </a>
+
+                <a class="card reveal" data-category="apps" href="https://pisscord.dacite.dev" target="_blank" rel="noopener">
+                    <div class="card-head">
+                        <h3>Pisscord <span class="ext" aria-hidden="true">↗</span></h3>
+                        <span class="status is-paused"><span class="led"></span> Paused</span>
+                    </div>
+                    <p class="card-desc">A Discord clone for real-time chat with friends. Built as a full-stack experiment and hosted separately on Vercel.</p>
+                    <p class="card-tags">Full-stack · Realtime · Vercel</p>
+                </a>
+
+            </div>
+
+            <p id="empty-state" style="display:none;color:var(--text-dim);padding:30px 4px;">No projects in this category yet.</p>
+        </section>
     </main>
 
-    <!-- Buy Me a Coffee -->
-    <div class="mt-12">
-        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="dacite" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-    </div>
-
-    <!-- Footer Section -->
-    <footer class="mt-6 text-center text-gray-500">
-        <p>&copy; 2026 Dacite. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; <span id="year">2026</span> Dacite</p>
+            <div class="footer-links">
+                <a href="https://github.com/DaciteRocks" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.buymeacoffee.com/dacite" target="_blank" rel="noopener">Buy me a coffee ☕</a>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        var header = document.getElementById('siteHeader');
+        var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        var chips = document.querySelectorAll('.chip');
+        var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+        var empty = document.getElementById('empty-state');
+        chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+                chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+                chip.setAttribute('aria-pressed', 'true');
+                var f = chip.dataset.filter;
+                var shown = 0;
+                cards.forEach(function (card) {
+                    var match = f === 'all' || card.dataset.category === f;
+                    card.classList.toggle('hidden', !match);
+                    if (match) shown++;
+                });
+                empty.style.display = shown === 0 ? 'block' : 'none';
+            });
+        });
+
+        var reveals = document.querySelectorAll('.reveal');
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce || !('IntersectionObserver' in window)) {
+            reveals.forEach(function (el) { el.classList.add('in-view'); });
+        } else {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        var el = entry.target;
+                        el.style.transitionDelay = ((Array.prototype.indexOf.call(reveals, el) % 3) * 70) + 'ms';
+                        el.classList.add('in-view');
+                        io.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.12 });
+            reveals.forEach(function (el) { io.observe(el); });
+        }
+    </script>
 </body>
 </html>
